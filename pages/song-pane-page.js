@@ -17,7 +17,22 @@ SongPanePage.prototype = Object.create({}, {
         value: function () {
             var plusIconElement = element(by.css(this.plusIcon));
 
-            return plusIconElement.click();
+            return plusIconElement.getText()
+            .then(function (text) {
+                console.log('Printing text');
+                console.log(text);
+            });
+            //return plusIconElement.click();
+        }
+    },
+
+    getTitle: {
+        value: function () {
+            browser.getTitle()
+                .then(function (title) {
+                    console.log('Printing title...');
+                    console.log(title);
+                });
         }
     }
 });
