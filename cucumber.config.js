@@ -13,10 +13,10 @@ exports.config = {
     ],
 
     capabilities: {
-        browserName: 'chrome'
+        browserName: 'firefox'
     },
 
-    baseUrl: 'http://demo.songpane.com',
+    baseUrl: 'http://www.msnbc.com',
 
     allScriptsTimeout: 11000,
 
@@ -25,10 +25,11 @@ exports.config = {
 
     params: {
         common: {
-            buildIndex: '/#/sets/',
+            buildIndex: '/',
             explicitTimeout: 2500,
             windowWidth: 1200,
             windowHeight: 1600,
+            sleepTimeout: 2000,
             cucumberTimeout: 60000
         }
     },
@@ -39,7 +40,7 @@ exports.config = {
     },
 
     cucumberOpts: {
-        require: './step-definitions/*.js',
+        require: './step-definitions/**/*.js',
         tags: '@regression',
         format: undefined,
         profile: false,

@@ -10,7 +10,6 @@ module.exports = function () {
      * Before hook, it will get executed before each scenario
      */
     this.Before(function (done) {
-        browser.get(browser.baseUrl + browser.params.common.buildIndex)
-            .then(done);
+        browser.get(browser.baseUrl + browser.params.common.buildIndex);
     });
 };
